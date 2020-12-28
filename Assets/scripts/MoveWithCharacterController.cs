@@ -8,7 +8,7 @@ public class MoveWithCharacterController : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private float playerSpeed = 10.0f;
-    private float jumpHeight = 1.0f;
+    private float jumpHeight = 6.0f;
     private float gravityValue = -9.81f;
 
     private void Start()
@@ -39,10 +39,7 @@ public class MoveWithCharacterController : MonoBehaviour
         controller.Move(move * Time.deltaTime * playerSpeed);
 
         // to już nam potrzebne nie będzie
-        //if (move != Vector3.zero)
-        //{
-        //    gameObject.transform.forward = move;
-        //}
+    
 
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {

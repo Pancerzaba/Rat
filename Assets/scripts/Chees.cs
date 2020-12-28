@@ -1,18 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
+using Random = UnityEngine.Random;
+
+
+
 
 public class Chees : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+       
     }
 
-    // Update is called once per frame
-    void Update()
+    //wbudowana funkcja OnTriggerEnter wywoływana w momencie zetknięcia się obiektu z królikiem
+    private void OnTriggerEnter(Collider other)
     {
-        
+        //wywołanie funkcji ReplaceCarrot
+        ReplaceChees();
     }
+
+    //zdefiniowanie funkcji ReplaceCarrot 
+    private void ReplaceChees()
+    {
+
+        //usuniecie obiektu
+        Destroy(gameObject);
+    }
+
 }
