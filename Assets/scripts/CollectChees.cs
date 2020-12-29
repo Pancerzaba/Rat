@@ -8,8 +8,10 @@ public class CollectChees : MonoBehaviour
 {
     //zadeklarowanie zmiennej pola tekstowego
     private GameObject cheeseScore;
+
+
     //zadeklarowanie zmiennej licznika marchewek
-    private int cheesCollected=-3;
+    private int cheesCollected;
 
     //funkcja wywoływana podczas uruchomienia programu
     private void Start()
@@ -21,11 +23,17 @@ public class CollectChees : MonoBehaviour
     //funkcja wykonywana podczas kolizji królika i marchewkicheeseScore
     private void OnTriggerEnter(Collider chees)
     {
-        //zwiększenie licznika o 1
-        cheesCollected += 1;
+        if (chees.tag.Equals("Item")) { 
+            //zwiększenie licznika o 1
+            cheesCollected += 1;
+         // Destroy(this.gameObject);
         //zmiana tekstu obiektu
+
         cheeseScore.GetComponent<Text>().text = "Cheese: " + cheesCollected;
-        //Destroy(gameObject);
+           
+        }
+
+      
     }
 
 }
