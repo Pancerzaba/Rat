@@ -9,7 +9,6 @@ public class LookAround : MonoBehaviour
     public Transform player;
 
     public float sensitivity = 200f;
-    public float maxX = 4;
 
     void Start()
     {
@@ -24,10 +23,8 @@ public class LookAround : MonoBehaviour
         float mouseXMove = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
         float mouseYMove = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
-        mouseXMove = Mathf.Clamp(mouseXMove, -1,  1);
-
         // wykonujemy rotację wokół osi Y
-        player.Rotate(Vector3.up * mouseXMove );
+        player.Rotate(Vector3.up * mouseXMove);
 
         // a dla osi X obracamy kamerę dla lokalnych koordynatów
         // -mouseYMove aby uniknąć ofektu mouse inverse
