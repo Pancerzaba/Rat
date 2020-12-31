@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CollectCrystal : MonoBehaviour
 {
     //zadeklarowanie zmiennej pola tekstowego
-    private GameObject crystalScore;
+    private GameObject koniec;
 
 
     //zadeklarowanie zmiennej licznika marchewek
@@ -17,7 +17,7 @@ public class CollectCrystal : MonoBehaviour
     private void Start()
     {
         //przypisanie do zmiennej wyszukanego obiektu CarrotsScore
-        crystalScore = GameObject.Find("cheeseScore");
+        koniec = GameObject.Find("koniec");
     }
 
     //funkcja wykonywana podczas kolizji królika i marchewkicheeseScore
@@ -31,7 +31,7 @@ public class CollectCrystal : MonoBehaviour
             //zmiana tekstu obiektu
             //zmiana tekstu obiektu
             Console.WriteLine(crystalCollected);
-            crystalScore.GetComponent<Text>().text = "Kryształ " + crystalCollected;
+            koniec.GetComponent<Text>().text = "Koniec levelu";
 
         }
 
