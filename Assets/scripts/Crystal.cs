@@ -8,23 +8,23 @@ using Random = UnityEngine.Random;
 
 
 
-public class Chees : MonoBehaviour
+public class Crystal : MonoBehaviour
 {
 
     void Start()
     {
-       
+
     }
 
     //wbudowana funkcja OnTriggerEnter wywoływana w momencie zetknięcia się obiektu z królikiem
     private void OnTriggerEnter(Collider other)
     {
         //wywołanie funkcji ReplaceCarrot
-        RemoveChees();
+        RemoveCrystal();
     }
 
     //zdefiniowanie funkcji ReplaceCarrot 
-    private void RemoveChees()
+    private void RemoveCrystal()
     {
 
         //usuniecie obiektu
