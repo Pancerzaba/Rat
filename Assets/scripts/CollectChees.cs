@@ -13,6 +13,12 @@ public class CollectChees : MonoBehaviour
     //zadeklarowanie zmiennej licznika marchewek
     private int cheesCollected=0;
 
+    //zrodlo dzwieku
+    public AudioSource zrodloDzwieku;
+
+    //odglos strzallu
+    public AudioClip odglosZebrania;
+
     //funkcja wywoływana podczas uruchomienia programu
     private void Start()
     {
@@ -31,6 +37,10 @@ public class CollectChees : MonoBehaviour
             //zmiana tekstu obiektu
             Console.WriteLine(cheesCollected);
         cheeseScore.GetComponent<Text>().text = "Ser2: " + cheesCollected;
+            if(zrodloDzwieku != null)
+            {
+                zrodloDzwieku.PlayOneShot(odglosZebrania);
+            }
            
         }
 

@@ -8,7 +8,7 @@ public class LookAround : MonoBehaviour
     // potrzebna nam referencja do niego (konkretnie jego komponentu Transform)
     public Transform player;
 
-    public float sensitivity = 200f;
+    public float sensitivity = 400f;
 
     void Start()
     {
