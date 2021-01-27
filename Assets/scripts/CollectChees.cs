@@ -34,7 +34,7 @@ public class CollectChees : MonoBehaviour
             cheesCollected += 1;
             // Destroy(this.gameObject);
             //zmiana tekstu obiektu
-            //zmiana tekstu obiektu
+           
             Console.WriteLine(cheesCollected);
         cheeseScore.GetComponent<Text>().text = "Ser2: " + cheesCollected;
             if(zrodloDzwieku != null)
