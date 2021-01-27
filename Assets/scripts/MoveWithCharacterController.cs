@@ -8,7 +8,7 @@ public class MoveWithCharacterController : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private float playerSpeed = 10.0f;
-    private float jumpHeight = 2.0f;
+    private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
 
     private void Start()
@@ -26,7 +26,7 @@ public class MoveWithCharacterController : MonoBehaviour
         // dzięki parametrowi playerGrounded możemy dodać zachowania, które będą
         // mogły być uruchomione dla każdego z dwóch stanów
         groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
+        if ((groundedPlayer && playerVelocity.y < 0 )||( groundedPlayer && playerVelocity.y>0))
         {
             playerVelocity.y = 0f;
         }
@@ -39,7 +39,7 @@ public class MoveWithCharacterController : MonoBehaviour
         controller.Move(move * Time.deltaTime * playerSpeed);
 
         // to już nam potrzebne nie będzie
-    
+        
 
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
