@@ -27,9 +27,9 @@ public class LookAround : MonoBehaviour
         player.Rotate(Vector3.up * mouseXMove);
 
         // a dla osi X obracamy kamerę dla lokalnych koordynatów
-        // -mouseYMove aby uniknąć ofektu mouse inverse
-        player.Rotate(Vector3.up * mouseYMove);
-        //transform.Rotate(new Vector3(-mouseYMove, 0f, 0f), Space.Self);
+        //-mouseYMove aby uniknąć ofektu mouse inverse
+       // player.Rotate(Vector3.up * mouseYMove);
+        transform.Rotate(new Vector3(-mouseYMove, 0f, 0f), Space.Self);
 
     }
 }
