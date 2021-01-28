@@ -19,14 +19,13 @@ public class MoveWithCharacterController : MonoBehaviour
 
     void Update()
     {
-        // wyciągamy wartości, aby możliwe było ich efektywniejsze wykorzystanie w funkcji
+        // wartości poruszania sie
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
 
    
-        // dzięki parametrowi playerGrounded możemy dodać zachowania, które będą
-        // mogły być uruchomione dla każdego z dwóch stanów
+        // 
         groundedPlayer = controller.isGrounded;
         if ((groundedPlayer && playerVelocity.y < 0 )||( groundedPlayer && playerVelocity.y>0))
         {
@@ -40,7 +39,7 @@ public class MoveWithCharacterController : MonoBehaviour
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         controller.Move(move * Time.deltaTime * playerSpeed);
 
-        // to już nam potrzebne nie będzie
+
         
 
         if (Input.GetButtonDown("Jump") && groundedPlayer)
@@ -49,8 +48,7 @@ public class MoveWithCharacterController : MonoBehaviour
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
 
-        // prędkość swobodnego opadania zgodnie ze wzorem y = (1/2 * g) * t-kwadrat 
-        // okazuje się, że jest to zbyt wolne opadanie, więc zastosowano g * t-kwadrat
+         //swobodne opadanie
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }

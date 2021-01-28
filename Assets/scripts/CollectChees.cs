@@ -52,7 +52,7 @@ public class CollectChees : MonoBehaviour
 
             // if (chees  == cheesCollected) {
             boxCollected += 1;
-            cheesCollected += 5;
+            cheesCollected += 3;
 
             //healthScore.GetComponent<Text>().text = "Ser: " + health;
 
