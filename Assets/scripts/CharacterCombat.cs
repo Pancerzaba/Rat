@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterCombat : MonoBehaviour
 {
     public CharacterStatus myStats;
-    // Start is called before the first frame update
+  
     void Start()
     {
         myStats = GetComponent<CharacterStatus>();

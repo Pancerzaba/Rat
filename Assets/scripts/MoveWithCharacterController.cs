@@ -23,6 +23,9 @@ public class MoveWithCharacterController : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
+
+        float rotationX = Input.GetAxis("Horizontal");
+        if (rotationX > 10) rotationX = 10;
         // dzięki parametrowi playerGrounded możemy dodać zachowania, które będą
         // mogły być uruchomione dla każdego z dwóch stanów
         groundedPlayer = controller.isGrounded;

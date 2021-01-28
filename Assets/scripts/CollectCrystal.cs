@@ -21,9 +21,9 @@ public class CollectCrystal : MonoBehaviour
     }
 
     //funkcja wykonywana podczas kolizji królika i marchewkicheeseScore
-    private void OnTriggerEnter(Collider chees)
+    private void OnTriggerEnter(Collider crystal)
     {
-        if (chees.tag.Equals("crystal"))
+        if (crystal.tag.Equals("crystal"))
         {
             //zwiększenie licznika o 1
             crystalCollected += 1;

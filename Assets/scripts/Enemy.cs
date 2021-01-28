@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStats : MonoBehaviour
+public class Enemy : MonoBehaviour
 
 {
     float radius = 2f;
@@ -13,7 +13,7 @@ public class EnemyStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //player.PlayerManager.instance.player;
+        player=PlayerManager.instance.player;
         myStats = GetComponent<CharacterStatus>();
     }
 
