@@ -36,12 +36,7 @@ public class CollectChees : MonoBehaviour
     }
    private void Update()
     {
-        if (cheesCollected >= 100)
-        {
-            cheesCollected -= 100;
-            health += 1;
-            healthScore.GetComponent<Text>().text = "Boxy: " + health;
-        }
+        
         }
 
     private void OnTriggerStay(Collider box)
@@ -61,10 +56,16 @@ public class CollectChees : MonoBehaviour
 
             //Destroy(this.gameObject);
             //zmiana tekstu obiektu
+            if (cheesCollected >= 100)
+            {
+                cheesCollected -= 100;
+                health += 1;
+                healthScore.GetComponent<Text>().text = "Życie: " + health;
+            }
 
             Console.WriteLine(boxCollected);
 
-            boxScore.GetComponent<Text>().text = "Boxy: " + boxCollected;
+            boxScore.GetComponent<Text>().text = "Pudełka: " + boxCollected;
             cheeseScore.GetComponent<Text>().text = "Ser: " + cheesCollected;
             
 
@@ -84,7 +85,7 @@ public class CollectChees : MonoBehaviour
             {
                 cheesCollected -= 100;
                 health += 1;
-                healthScore.GetComponent<Text>().text = "Ser: " + health;
+                healthScore.GetComponent<Text>().text = "Życie: " + health;
             }
 
             Console.WriteLine(cheesCollected);
