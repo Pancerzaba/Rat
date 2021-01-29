@@ -9,9 +9,11 @@ IDZ DO TYLU -S,
 IDZ W LEWO -A, 
 IDZ W PRAWO -D
 
-SKOS- SPACJA
+SKOk- SPACJA
 
-ATTAK -Q
+ATAK -Q
 
 ROZGLADANIE SIE -RUCHY MYSZKĄ
+
+Za każde 100 serów dostajemy dodatkowe życie.
 
