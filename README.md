@@ -4,9 +4,9 @@ Jest ona inspirowana grą Crash Bandicoot. Zamiast jabłek zbieramy ser. Crash p
 informując nas o niebezpieczeństwie jakie nam grozi. Aby mu zapobiec musimy zebrać jak najwiecej Kryształów Energii, które są na końcu planszy.
 
 Sterowanie
-IDZ DO PRZODU -W
-IDZ DO TYLU -S
-IDZ W LEWO -A
+IDZ DO PRZODU -W, 
+IDZ DO TYLU -S, 
+IDZ W LEWO -A, 
 IDZ W PRAWO -D
 
 SKOS- SPACJA
